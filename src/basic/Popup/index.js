@@ -83,13 +83,13 @@ class Popup extends Component {
 	}
 
 	defaultCallback() {
-		return Alert.alert(
-			'Callback!',
-			'Callback complete!',
-			[
-				{ text: 'Ok', onPress: () => this.hidePopup() }
-			]
-		)
+	var that =  this
+	 setTimeout(()=>{
+		that.hidePopup()
+
+	 },6000)
+
+
 	}
 
 	handleImage(type) {
@@ -201,7 +201,7 @@ const styles = StyleSheet.create({
 		marginTop: 10
 	},
 	Button: {
-		borderRadius: 50,
+		borderRadius: 10,
 		height: 40,
 		width: 130,
 		justifyContent: 'center',
@@ -213,8 +213,8 @@ const styles = StyleSheet.create({
 		fontWeight: 'bold'
 	},
 	Success: {
-		backgroundColor: '#AAF577',
-		shadowColor: "#AAF577",
+		backgroundColor: '#1264e4',
+		shadowColor: "#1264e4",
 		shadowOffset: {
 			width: 0,
 			height: 5,
